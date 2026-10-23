@@ -1,0 +1,7 @@
+city,sessions,orders,conversion_pct,revenue_inr,avg_order_value_inr,revenue_rank
+Bengaluru,5146,157,3.05,410821.0,2617.0,1
+Chennai,1514,55,3.63,152136.0,2766.0,2
+Hyderabad,1521,53,3.48,138336.0,2610.0,3
+Pune,1267,45,3.55,129246.0,2872.0,4
+Mumbai,1227,49,3.99,121344.0,2476.0,5
+Mysuru,1214,36,2.97,105656.0,2935.0,6

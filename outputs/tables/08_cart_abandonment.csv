@@ -1,0 +1,4 @@
+device_category,sessions_with_cart,abandoned_carts,abandonment_pct,abandoned_at_checkout,abandoned_value_inr,abandoned_at_checkout_value_inr
+mobile,1089,874,80.3,307,2318796.0,800844.0
+desktop,501,342,68.3,53,914907.0,145937.0
+tablet,64,43,67.2,12,111452.0,26788.0

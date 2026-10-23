@@ -1,0 +1,4 @@
+device_category,sessions,view_to_cart_pct,cart_to_checkout_pct,checkout_to_purchase_pct,session_conversion_pct
+mobile,8034,25.5,47.9,41.2,2.68
+desktop,3306,28.2,42.3,75.0,4.81
+tablet,549,22.7,51.6,63.6,3.83

@@ -1,0 +1,7 @@
+channel,sessions,share_of_sessions_pct,orders,conversion_pct,revenue_inr,share_of_revenue_pct,revenue_per_session_inr
+(direct) / (none),3313,27.9,122,3.68,313162.0,29.6,94.5
+google / organic,3083,25.9,119,3.86,313160.0,29.6,101.6
+newsletter / email,1243,10.5,60,4.83,157835.0,14.9,127.0
+instagram / social,2219,18.7,40,1.8,113152.0,10.7,51.0
+google / cpc,1292,10.9,31,2.4,86160.0,8.1,66.7
+whatsapp / referral,739,6.2,23,3.11,74070.0,7.0,100.2
