@@ -7,7 +7,7 @@
 | | |
 |---|---|
 | Live store | https://yuvrajbhagyedh.github.io/Piston-hub-Bike-accessory-website/ |
-| Tracking | GTM `GTM-WHBDV6TQ` → GA4 `G-WB9X5NXCLG` (live, verified in Tag Assistant) |
+| Tracking | GTM `GTM-WHBDV6TQ` → GA4 `G-WB9X5NXCLG` (live; e-commerce hits verified on the production site) |
 | Analysis data | 90 days, 9,000 users, 65k events — simulated in the exact GA4 schema the live site sends ([why & how](docs/simulation-assumptions.md)) |
 
 ---
@@ -46,7 +46,7 @@ flowchart LR
 
 ## 3. GTM & GA4 implementation highlights
 
-- **Live and verified.** GTM container found on the live URL; Tag Assistant shows *GA4 - Google Tag* fired to `G-WB9X5NXCLG`; version 2 published. [Screenshots](docs/gtm-ga4-implementation.md).
+- **Live and verified.** GTM container found on the live URL; Tag Assistant shows *GA4 - Google Tag* fired to `G-WB9X5NXCLG`; e-commerce tags published as version 3, and live GA4 hits for `view_item` / `add_to_cart` confirmed with full item data. [Screenshots](docs/gtm-ga4-implementation.md).
 - **Robust event design.** Instead of tagging each button, `analytics.js` wraps the store's own `addToCart`, `removeFromCart`, `createOrder`, `loginUser` and `signupUser` functions — any UI path that changes the cart is tracked, and redesigns don't break tracking.
 - **Lean GTM container.** Two GA4 event tags driven by regex Custom Event triggers instead of 12 near-identical tags; adding an event is a one-word change.
 - **Privacy by design.** No name, email, phone, address or free text ever reaches GA4; only city. Admin pages don't load GTM.
@@ -143,7 +143,7 @@ Returning sessions convert at 4.5% vs 2.9% for new ones (₹118 vs ₹80 per ses
 
 ## 8. Next steps
 
-1. Import the [GTM e-commerce tags](gtm/piston-hub-gtm-import.json), preview, publish; mark `purchase`, `generate_lead`, `sign_up` as key events in GA4.
+1. Mark `purchase`, `generate_lead`, `sign_up` as key events in GA4 and register the custom dimensions (the e-commerce tags are already live in GTM version 3).
 2. Link GA4 → BigQuery (free daily export) and point `clean_and_load.py` at the export instead of the simulator; the SQL is written against the same flattened schema.
 3. Build a Looker Studio dashboard on the funnel, device and channel queries for the weekly review.
 4. Run the mobile checkout fix as an A/B test and measure with the funnel-by-device query.

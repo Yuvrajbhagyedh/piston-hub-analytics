@@ -8,7 +8,7 @@ End-to-end e-commerce analytics for **Piston Hub**, a live bike-accessories stor
 |---|---|
 | 🛒 Live store | https://yuvrajbhagyedh.github.io/Piston-hub-Bike-accessory-website/ |
 | 🏷️ GTM container | `GTM-WHBDV6TQ` — installed on 27 pages, verified, published |
-| 📊 GA4 property | `G-WB9X5NXCLG` — Google tag live; 12 e-commerce/engagement events in the dataLayer |
+| 📊 GA4 property | `G-WB9X5NXCLG` — Google tag + 12 e-commerce/engagement events live (GTM version 3) |
 | 💡 Key finding | Mobile checkout completes at 41% vs 75% on desktop — fixing it is worth **~+25% revenue** |
 
 ![Funnel](outputs/charts/01_funnel.png)

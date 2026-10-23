@@ -63,7 +63,7 @@ Version 2 published and live.
 Verified in the browser on all 27 pages: each page fires the expected event, and a full journey produced
 `view_item_list → add_to_cart → view_cart → remove_from_cart → begin_checkout → purchase` with correct items and INR values.
 
-**GTM side (import file ready):** [`gtm/piston-hub-gtm-import.json`](../gtm/piston-hub-gtm-import.json) adds:
+**GTM side (imported and published as version 3):** [`gtm/piston-hub-gtm-import.json`](../gtm/piston-hub-gtm-import.json) adds:
 
 | Type | Name | Purpose |
 |---|---|---|
@@ -75,7 +75,9 @@ Verified in the browser on all 27 pages: each page fires the expected event, and
 
 Two tags with regex triggers instead of 12 one-event tags keeps the container small and easy to audit — adding a new e-commerce event is a one-word change to the regex.
 
-**Import:** GTM → Admin → Import Container → choose the JSON → *Existing workspace* → *Merge, overwrite conflicts* → Preview → Submit.
+**Import:** GTM → Admin → Import Container → choose the JSON → *Existing workspace* → *Merge, overwrite conflicts* (11 added, 0 modified, 0 deleted — the existing Google tag is untouched) → Submit → Publish.
+
+**Verified live:** on the production site, GA4 collect hits to `G-WB9X5NXCLG` were observed for `page_view`, `view_item` and `add_to_cart`, each carrying the full item (`id axor-gloves · Axor Gloves · Axor · Gloves · 1799 · qty 1`).
 
 ## Design decisions
 
